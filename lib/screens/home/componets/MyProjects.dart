@@ -6,11 +6,16 @@ import '../../../constants.dart';
 import '../../../models/project.dart';
 import 'ProjectCard.dart';
 
-class MyProjects extends StatelessWidget {
+class MyProjects extends StatefulWidget {
   const MyProjects({
     super.key,
   });
 
+  @override
+  State<MyProjects> createState() => _MyProjectsState();
+}
+
+class _MyProjectsState extends State<MyProjects> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +28,7 @@ class MyProjects extends StatelessWidget {
         const SizedBox(
           height: defaultPadding,
         ),
-        Responsive(
+        const Responsive(
           mobile: ProjectGridView(
             crossAxisCount: 1,
             childAspectRation: 1.7,
@@ -56,7 +61,7 @@ class ProjectGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: demoproject.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: crossAxisCount,

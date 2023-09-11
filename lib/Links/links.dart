@@ -1,3 +1,5 @@
+
+
 // CV
 const String resume =
     'https://drive.google.com/file';
@@ -24,4 +26,3 @@ const String fiverr = 'https://www.fiverr.com/bahiznalakath';
 // Github Link
 const String upwork = 'https://www.upwork.com/freelancers/bahiznalakath';
 // Github Link
-const String whatsapp = 'https://api.whatsapp.com/send?phone=9072834040';

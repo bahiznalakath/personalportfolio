@@ -10,10 +10,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainScreen(children: [
+    return  const MainScreen(children: [
+      Divider(),
       HomeBanner(),
+      Divider(),
       HighLightsInfo(),
+      Divider(),
       MyProjects(),
+      Divider()
       // Recommendations(),
 
     ]);
