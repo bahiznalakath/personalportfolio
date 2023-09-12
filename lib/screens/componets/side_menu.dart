@@ -144,7 +144,7 @@ class _SideMenuState extends State<SideMenu> {
                         //       _launchUrl(instagram);
                         //     },
                         //     icon:
-                        //         SvgPicture.asset("assets/icons/instagram.svg",height: defaultPadding,))
+                        //         Expanded(child: SvgPicture.asset("assets/icons/inst.svg",)))
                       ],
                     ),
                   ),
