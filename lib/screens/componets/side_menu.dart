@@ -117,34 +117,50 @@ class _SideMenuState extends State<SideMenu> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        IconButton(
-                            onPressed: () {
-                              launchUrl(linkedin);
-                            },
-                            icon:
-                                SvgPicture.asset("assets/icons/linkedin.svg")),
-                        IconButton(
-                            onPressed: () async {
-                              launchUrl(gitHub);
-                            },
-                            icon: SvgPicture.asset("assets/icons/github.svg")),
-                        IconButton(
-                            onPressed: () {
-                              launchUrl(twitter);
-                            },
-                            icon: SvgPicture.asset("assets/icons/x.svg")),
-                        IconButton(
-                            onPressed: () {
-                              _launchUrl(whatsapp);
-                            },
-                            icon:
-                                SvgPicture.asset("assets/icons/whatsapp.svg")),
-                        // IconButton(
-                        //     onPressed: () {
-                        //       _launchUrl(instagram);
-                        //     },
-                        //     icon:
-                        //         Expanded(child: SvgPicture.asset("assets/icons/inst.svg",)))
+                        Expanded(
+                          child: IconButton(
+                              onPressed: () {
+                                launchUrl(linkedin);
+                              },
+                              icon: SvgPicture.asset(
+                                  "assets/icons/linkedin.svg")),
+                        ),
+                        Expanded(
+                          child: IconButton(
+                              onPressed: () async {
+                                launchUrl(gitHub);
+                              },
+                              icon:
+                                  SvgPicture.asset("assets/icons/github.svg")),
+                        ),
+                        Expanded(
+                          child: IconButton(
+                              onPressed: () {
+                                _launchUrl(whatsapp);
+                              },
+                              icon: SvgPicture.asset(
+                                  "assets/icons/whatsapp.svg")),
+                        ),
+                        Expanded(
+                          child: IconButton(
+                              onPressed: () {
+                                _launchUrl(instagram);
+                              },
+                              icon: Image.asset(
+                                fit: BoxFit.cover,
+                                "assets/images/instagram.png",
+                              )),
+                        ),
+                        Expanded(
+                          child: IconButton(
+                              onPressed: () {
+                                _launchUrl(twitter);
+                              },
+                              icon: Image.asset(
+                                fit: BoxFit.cover,
+                                "assets/images/twitter.png",
+                              )),
+                        )
                       ],
                     ),
                   ),
