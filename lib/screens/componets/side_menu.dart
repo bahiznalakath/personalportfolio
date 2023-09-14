@@ -59,7 +59,7 @@ class _SideMenuState extends State<SideMenu> {
                       padding: EdgeInsets.all(8.0),
                       child: Text(
                         "I recently completed my Bachelor's degree in Computer Science and have a strong passion for crafting captivating and interactive Flutter applications. I prioritize the creation of visually appealing user interfaces that deliver exceptional user experiences. While my main area of expertise is in front-end development, I also actively engage in backend development for Flutter applications to ensure seamless feature integration and robust data management. My commitment to user-centered design, combined with my proficiency in backend development, enables me to provide comprehensive contributions to the development of feature-rich and visually stunning Flutter applications.",
-                        style: TextStyle(fontSize: 10),
+                        style: TextStyle(fontSize: 10,color: Colors.white),
                         maxLines: 16,
                       ),
                     ),

@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../constants.dart';
 import '../../../models/project.dart';
 
-class ProjectCard extends StatelessWidget {
+class ProjectCard extends StatefulWidget {
   const ProjectCard({
     super.key,
     required this.project,
@@ -14,13 +13,18 @@ class ProjectCard extends StatelessWidget {
   final Project project;
 
   @override
+  State<ProjectCard> createState() => _ProjectCardState();
+}
+
+class _ProjectCardState extends State<ProjectCard> {
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () async {
-        if (await canLaunch(project.githubUrl!)) {
-          await launch(project.githubUrl!);
+        if (await canLaunch(widget.project.githubUrl!)) {
+          await launch(widget.project.githubUrl!);
         } else {
-          throw 'Could not launch ${project.githubUrl}';
+          throw 'Could not launch ${widget.project.githubUrl}';
         }
       },
       child: Card(
@@ -35,20 +39,22 @@ class ProjectCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                project.title!,
-                maxLines: 2,
+                widget.project.title!,
+                maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleSmall,
               ),
-              const Spacer(),
-              Text(
-                project.description!,
-                maxLines: Responsive.isMobileLarge(context)?3: 4,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(height: 1.5),
+              const Divider(),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [Text(widget.project.description!)],
+                  ),
+                ),
               ),
-              const Spacer(),
-              TextButton(onPressed: () {}, child: const Text("Read More>>",style: TextStyle(color: primaryColor),))
+              const Divider(),
+
             ],
           ),
         ),

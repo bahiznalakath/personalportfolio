@@ -5,7 +5,7 @@ class Recommendation{
 final List<Recommendation>itemRecommendation=[
   Recommendation(
     name: " jfn",
-    source: "nermfmew",
+    source: "newcomer",
     text: "nwe,mn,"
   )
 ];

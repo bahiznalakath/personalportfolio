@@ -37,14 +37,16 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                     )
                   ])),
         ),
-        SizedBox(
+        const SizedBox(
           height: defaultPadding / 2,
         ),
         Text(
           label,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: Theme.of(context).textTheme.titleSmall,
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                fontSize: 14.0,
+              ),
         )
       ],
     );
