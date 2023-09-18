@@ -17,7 +17,7 @@ class SideMenu extends StatefulWidget {
 
 class _SideMenuState extends State<SideMenu> {
   bool isAboutMeVisible = false;
-  final Uri resume = Uri.parse('https://drive.google.com/file');
+  final Uri resume = Uri.parse('https://drive.google.com/file/d/1fBtjD9Lyfgyc7bchFYnSsrLZN69yC7-f/view?usp=sharing');
   final Uri instagram =
       Uri.parse('https://instagram.com/bahiz_nalakath?igshid=OGQ5ZDc2ODk2ZA==');
   final Uri gitHub = Uri.parse('https://github.com/bahiznalakath');
